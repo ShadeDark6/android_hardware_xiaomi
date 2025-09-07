@@ -1,0 +1,17 @@
+// File: hardware/xiaomi/interfaces/touchfeature/aidl/Android.bp
+aidl_interface {
+    name: "vendor.xiaomi.hw.touchfeature",
+    vendor: true,
+    // The path to the root of the source files
+    srcs: ["vendor/xiaomi/hw/touchfeature/ITouchFeature.aidl"], 
+    stability: "vintf",
+    owner: "xiaomi",
+    backend: {
+        java: {
+            enabled: true,
+        },
+        cpp: {
+            enabled: true,
+        },
+    },
+}

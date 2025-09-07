@@ -1,0 +1,16 @@
+cc_binary {
+    name: "vendor.xiaomi.hw.touchfeature-service",
+    relative_install_path: "hw",
+    init_rc: ["vendor.xiaomi.hw.touchfeature-service.rc"],
+    vintf_fragments: ["vendor.xiaomi.hw.touchfeature-service.xml"],
+    vendor: true,
+    srcs: [
+        "service.cpp",
+        "Touch.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "vendor.xiaomi.hw.touchfeature-V1-ndk", // Links to the AIDL interface from Step 1
+    ],
+}

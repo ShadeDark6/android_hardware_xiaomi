@@ -1,0 +1,4 @@
+service vendor.touchfeature-hal /vendor/bin/hw/vendor.xiaomi.hw.touchfeature-service
+    class hal
+    user system
+    group system
